@@ -1,0 +1,35 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+
+// si elle existe dans un  projet ça veut dire c'est un projet qui utilise type script
+{
+  "compileOnSave": false, // compilation à chaque enredistrement de fichier pour fornir une projet compiler
+  "compilerOptions": {
+    // option de la compilation
+    "baseUrl": "./", //dossier source
+    "outDir": "./dist/out-tsc", //dossier sortie de compilation
+    "forceConsistentCasingInFileNames": true, //
+    "strict": true, // renforce la verification de code type script
+    "noImplicitOverride": true, // pour ne pas desyncronyser(modifier) la fonction en classe mere en classe  fils est utilsier le mot clé ovverride
+    "noPropertyAccessFromIndexSignature": true, // sans acces via les index pour verifer les proprieter d'un objet si existe sinon il leve un erreur
+    "noImplicitReturns": true, // verifer q'il y aretour pour tous les chemins d'un fonction
+    "noFallthroughCasesInSwitch": true, // garentie que switch gere tous les cas echeans de switch en utilisant breack, retrn throw
+    "sourceMap": true, // gere le mappage des ts vers fichiers js
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node", // algorithe utiliser pour resoudre les module c'est node (en recherchant dans node_module)
+    "importHelpers": true, // le compilateur utilise le tslib package et reduire la taille de la sorte
+    "target": "ES2022", // version de Ecmascript(jaavascript ciblé)
+    "module": "ES2022", //indiquer au compliateur quelle syntaxe module utiliser lorsque le fichiers sont compilés en javascript  (js)
+    "lib": ["ES2022", "dom"], // lib inclut dans le projet
+    "useDefineForClassFields": false, // suivre la dernier devsion de champ dde classe definit par ecmascript
+    "resolveJsonModule": true, // pour importer les fichiers json
+    "strictPropertyInitialization": false // lorsque la prorieter est definit mais pas  definis dans le constructeur
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": false
+  }
+}
